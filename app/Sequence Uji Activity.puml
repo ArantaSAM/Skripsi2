@@ -1,0 +1,27 @@
+@startuml
+actor User
+boundary UjiActivity
+control MainActivity
+entity DataGangguan
+
+User -> UjiActivity: Buka Apps
+UjiActivity -> MainActivity: Membuat list dari DataGangguanObjects
+MainActivity -> UjiActivity: mengembalikan list dari DataGangguan objects
+UjiActivity -> User: Menampilkan list dari gangguan objects
+User -> UjiActivity: memilih gangguan
+UjiActivity -> MainActivity: mengambil object gangguan yang telah dipilih
+MainActivity -> UjiActivity: mengembalikan object gangguan yang telah dipilih
+UjiActivity -> User: menampilkan detail dari object gangguan yang telah dipilih
+User -> UjiActivity: Menekan tombol Uji
+UjiActivity -> UjiActivity: Memulai halaman Uji
+UjiActivity -> MainActivity: mengembalikan object gangguan yang telah dipilih
+MainActivity -> UjiActivity: mengembalikan object gangguan yang telah dipilih
+UjiActivity -> User: menampilkan detail dari object gangguan yang telah dipilih
+User -> UjiActivity: menekan halaman layanan
+UjiActivity -> UjiActivity: Memulai halaman layanan
+UjiActivity -> MainActivity: mengembalikan object gangguan yang telah dipilih
+MainActivity -> UjiActivity: mengembalikan object gangguan yang telah dipilih
+UjiActivity -> User: menampilkan detail dari object gangguan yang telah dipilih
+User -> UjiActivity: Menekan tombol tentang
+UjiActivity -> UjiActivity: Memulai halaman tentang
+@enduml

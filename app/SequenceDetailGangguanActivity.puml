@@ -1,0 +1,18 @@
+
+@startuml
+actor User
+boundary DetailGangguanActivity
+control DetailGangguanBinding
+entity Gangguan
+
+User -> DetailGangguanActivity: Buka Aplikasi
+DetailGangguanActivity -> DetailGangguanBinding:
+DetailGangguanActivity -> Gangguan: pilih gangguan object
+Gangguan -> DetailGangguanActivity: kembali ke pilihan gangguan object
+DetailGangguanActivity -> DetailGambar: mengatur resource gambar
+DetailGangguanActivity -> DetailNama: mengatur teks nama
+DetailGangguanActivity -> DetailKeterangan: mengatur teks deskripsi
+DetailGangguanActivity -> DetailURL: mengatur click listener untuk URL
+DetailGangguanActivity -> DetailURL: mengatur teks URL
+@enduml
+```

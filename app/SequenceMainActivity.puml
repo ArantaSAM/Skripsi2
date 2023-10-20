@@ -1,0 +1,23 @@
+@startuml
+@startuml
+actor User
+boundary MainActivity
+control GangguanAdapter
+entity DataGangguan
+
+User ---> MainActivity: membuka
+MainActivity ---> GangguanAdapter: Membuat list DataGangguan
+GangguanAdapter ---> MainActivity: mengembalikan list dari DataGangguan
+MainActivity ---> User: Menampilkan list dari gangguan
+User ---> MainActivity: klik pada gangguan object
+MainActivity ---> GangguanAdapter: menerima pilihan dari gangguan object
+GangguanAdapter ---> MainActivity: mengembalikan pilihan dari gangguan object
+MainActivity ---> User: Menampilkan detail gangguan yang telah dipilih
+User ----> MainActivity: Klik tombol Uji
+MainActivity ---> MainActivity: Memulai UjiActivity
+User ---> MainActivity: Klik tombol Layanan
+MainActivity ---> MainActivity: Memulai LayananActivity
+User ---> MainActivity: Klik tombol Tentang
+MainActivity ---> MainActivity: Memulai TentangActivity
+
+@enduml
